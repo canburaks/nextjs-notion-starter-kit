@@ -23,11 +23,11 @@ Alarm sistemleri genel hatlarıyla acil durum uyarı cihazları, yangın algıla
 
 ## Intro
 
-This repo is what I use to power my personal blog / portfolio site [transitivebullsh.it](https://transitivebullsh.it).
+This repo is what I use to power my personal blog / portfolio site [transitivebullsh.it].
 
-It uses Notion as a CMS, fetching content from Notion and then uses [Next.js](https://nextjs.org/) and [react-notion-x](https://github.com/NotionX/react-notion-x) to render everything.
+It uses Notion as a CMS, fetching content from Notion and then uses [Next.js] and [react-notion-x] to render everything.
 
-The site is then deployed to [Vercel](http://vercel.com).
+The site is then deployed to [Vercel]http//vercel.com.
 
 ## Features
 
@@ -63,7 +63,7 @@ You'll want to make your root Notion page **public** and then copy the link to y
 
 In order to find your Notion workspace ID (optional), just load any of your site's pages into your browser and open up the developer console. There will be a global variable that you can access called `block` which is the Notion data for the current page, and you just have to type `block.space_id` which will print out your page's workspace ID.
 
-I recommend setting up a collection on your home page (optional; I use an inline gallery [here](https://notion.so/78fc5a4b88d74b0e824e29407e9f1ec1)) that contains all of your articles / projects / content. There are no structural constraints on your Notion workspace, however, so feel free to add content as you would normally in Notion. There are a few parts of the code with logic to only show comments on blog post pages (collection item detail pages).
+I recommend setting up a collection on your home page (optional; I use an inline gallery [here] that contains all of your articles / projects / content. There are no structural constraints on your Notion workspace, however, so feel free to add content as you would normally in Notion. There are a few parts of the code with logic to only show comments on blog post pages (collection item detail pages).
 
 ## URL Paths
 
@@ -83,7 +83,7 @@ NOTE: if you have multiple pages in your workspace with the same slugified name,
 
 All CSS styles that customize Notion content are located in [styles/notion.css]./styles/notion.css.
 
-They mainly target global CSS classes exported by react-notion-x [styles.css]https://github.com/NotionX/react-notion-x/blob/master/packages/react-notion-x/src/styles.css.
+They mainly target global CSS classes exported by react-notion-x [styles.cssgithub.com/NotionX/react-notion-x/blob/master/packages/react-notion-x/src/styles.css.
 
 It should be pretty easy to customize most styling-related things, especially with local development and hot reload.
 
@@ -119,7 +119,7 @@ This environment variable will only be taken into account in production, so you 
   <img alt="Embedded GitHub Comments" src="https://ssfy.io/https%3A%2F%2Fwww.notion.so%2Fimage%2Fhttps%253A%252F%252Fs3-us-west-2.amazonaws.com%252Fsecure.notion-static.com%252Fa43f996c-de07-4d8a-8461-b35f9d43e4b2%252Fcomments-desktop-opt.jpg%3Ftable%3Dblock%26id%3Ded07d7c2-57c9-4aba-81b3-f5fa069371d4%26cache%3Dv2" width="420">
 </p>
 
-[Utteranc.es]https://utteranc.es/ is an amazing [open source project]https://github.com/utterance/utterances which enables developers to embed GitHub issues as a comments section on their websites. Genius.
+[Utteranc.es]utteranc.es/ is an amazing [open source project]github.com/utterance/utterances which enables developers to embed GitHub issues as a comments section on their websites. Genius.
 
 The integration is really simple. Just edit the `utterancesGitHubRepo` config value to point to the repo you'd like to use for issue comments.
 
