@@ -16,6 +16,7 @@ module.exports = {
   socialImageTitle: 'Alarm Sistemleri Blog',
   socialImageSubtitle: 'Güvenlik ve Alarm Sistemleri Yazıları',
 
+
   // social usernames (optional)
   //twitter: 'webmeisterorg',
   //github: 'transitive-bullshit',
