@@ -158,6 +158,26 @@ export const NotionPage: React.FC<types.PageProps> = ({
     pageAside = <PageSocial />
   }
 
+  function makeLinksNoFollow() {
+    const whitelist = [
+      'www.filizguvenlik.com.tr',
+      'livicom.net',
+      'livicomturkiye.com',
+      'www.cbsofyalioglu.com',
+      'alarmsistemleri.org'
+    ]
+    if (pageId === '953c516d9348431caf2bf50d0fa0a214') {
+      const allAnchors = document.querySelectorAll('a')
+      for (const a of allAnchors.values()) {
+        if (!whitelist.includes(a.host)) {
+          a.rel = 'nofollow noopener'
+        }
+      }
+    }
+  }
+  React.useEffect(() => {
+    makeLinksNoFollow()
+  }, [])
   return (
     <TwitterContextProvider
       value={{
