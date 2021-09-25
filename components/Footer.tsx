@@ -24,6 +24,7 @@ export const Footer: React.FC<{
     setHasMounted(true)
   }, [])
 
+
   return (
     <footer className={styles.footer}>
       <div className={styles.copyright}>
