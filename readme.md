@@ -1,3 +1,14 @@
+# Alarm Sistemleri Rehberi
+Güvenlik alarmı olarak da bilinen [alarm sistemleri](https://alarmsistemleri.org) rehberi.
+Alarm, tehlikeli ya da tehlike oluşturabilecek bir durumu bildirmek için verilen işaret, sinyal anlamına gelir. Alarm durumu ise olası tehlikeyi önlemek için hazır ve uyanık vaziyette olma anlamı taşır. Bir alarm sistemi bir bina, ev ya da iş yerini güvende tutabilmek adına oluşturulan elektronik güvenlik sistemleridir.
+
+Alarm sistemleri genel hatlarıyla acil durum uyarı cihazları, yangın algılama ve uyarı sistemleri, karbon monoksit sensörleri, duman dedektörleri, hırsız alarmları, panik butonları ve kapalı devre televizyon sistemleri olan CCTV'leri kapsar.
+
+İşte bu akıllı sistemlerin güvenlik alarm sistemleri ile yaptıkları evliliğe [akıllı ev güvenlik sistemleri](https://livicomturkiye.com/) diyoruz. ürünler kullanarak kişilerin ve mülklerin güvenliğini üst düzeye çıkaran güvenlik sistemleri. [Akıllı ev sistemleri hakkında detaylı bilgiler](https://www.filizguvenlik.com.tr/akilli-ev-sistemleri/) başlıklı yazıyı okuyabilirsiniz.
+
+
+---
+
 <p align="center">
   <a href="https://transitivebullsh.it/nextjs-notion-starter-kit">
     <img alt="Example article page" src="https://ssfy.io/https%3A%2F%2Fwww.notion.so%2Fimage%2Fhttps%253A%252F%252Fs3-us-west-2.amazonaws.com%252Fsecure.notion-static.com%252Fd147d76c-28a4-4cdd-a503-2d6bcc50a787%252Ftransitivebullsh.it__(5)-opt.jpg%3Ftable%3Dblock%26id%3D5b87b717-ca5b-49da-b17c-12c3eab1644a%26cache%3Dv2" width="689">
@@ -12,16 +23,16 @@
 
 ## Intro
 
-This repo is what I use to power my personal blog / portfolio site [transitivebullsh.it](https://transitivebullsh.it).
+This repo is what I use to power my personal blog / portfolio site [transitivebullsh.it].
 
-It uses Notion as a CMS, fetching content from Notion and then uses [Next.js](https://nextjs.org/) and [react-notion-x](https://github.com/NotionX/react-notion-x) to render everything.
+It uses Notion as a CMS, fetching content from Notion and then uses [Next.js] and [react-notion-x] to render everything.
 
-The site is then deployed to [Vercel](http://vercel.com).
+The site is then deployed to [Vercel]http//vercel.com.
 
 ## Features
 
-- Setup only takes a few minutes ([single config file](./site.config.js)) 💪
-- Robust support for Notion content via [react-notion-x](https://github.com/NotionX/react-notion-x)
+- Setup only takes a few minutes single config file 💪
+- Robust support for Notion content via react-notion-x
 - Next.js / TS / React / Notion
 - Excellent page speeds
 - Sexy LQIP image previews
@@ -36,23 +47,23 @@ The site is then deployed to [Vercel](http://vercel.com).
 
 ## Setup
 
-**All config is defined in [site.config.js](./site.config.js).**
+**All config is defined in [site.config.js].**
 
 1. Fork / clone this repo
-2. Change a few values in [site.config.js](./site.config.js)
+2. Change a few values in [site.config.js]
 3. `npm install`
 4. `npm run dev` to test locally
 5. `npm run deploy` to deploy to vercel 💪
 
 I tried to make configuration as easy as possible.
 
-All you really need to do to get started is edit `rootNotionPageId`. It defaults to rendering my site's public notion page [78fc5a4b88d74b0e824e29407e9f1ec1](https://notion.so/78fc5a4b88d74b0e824e29407e9f1ec1).
+All you really need to do to get started is edit `rootNotionPageId`. It defaults to rendering my site's public notion page [78fc5a4b88d74b0e824e29407e9f1ec1].
 
 You'll want to make your root Notion page **public** and then copy the link to your clipboard. Then extract the last part of the URL that looks like `d1b5dcf8b9ff425b8aef5ce6f0730202`, which is your page's Notion iD.
 
 In order to find your Notion workspace ID (optional), just load any of your site's pages into your browser and open up the developer console. There will be a global variable that you can access called `block` which is the Notion data for the current page, and you just have to type `block.space_id` which will print out your page's workspace ID.
 
-I recommend setting up a collection on your home page (optional; I use an inline gallery [here](https://notion.so/78fc5a4b88d74b0e824e29407e9f1ec1)) that contains all of your articles / projects / content. There are no structural constraints on your Notion workspace, however, so feel free to add content as you would normally in Notion. There are a few parts of the code with logic to only show comments on blog post pages (collection item detail pages).
+I recommend setting up a collection on your home page (optional; I use an inline gallery [here] that contains all of your articles / projects / content. There are no structural constraints on your Notion workspace, however, so feel free to add content as you would normally in Notion. There are a few parts of the code with logic to only show comments on blog post pages (collection item detail pages).
 
 ## URL Paths
 
@@ -62,17 +73,17 @@ In development, it will use `/nextjs-notion-blog-d1b5dcf8b9ff425b8aef5ce6f073020
 
 In production, it will use `/nextjs-notion-blog` which is a bit nicer as it gets rid of the extra ID clutter.
 
-The mapping of Notion ID to slugified page titles is done automatically for you as part of the build process. Just keep in mind that if you plan on changing page titles over time, you probably want to make sure old links will still work, and we don't currently provide a solution for detecting old links aside from Next.js built-in [support for redirects](https://nextjs.org/docs/api-reference/next.config.js/redirects).
+The mapping of Notion ID to slugified page titles is done automatically for you as part of the build process. Just keep in mind that if you plan on changing page titles over time, you probably want to make sure old links will still work, and we don't currently provide a solution for detecting old links aside from Next.js built-in [support for redirects]https://nextjs.org/docs/api-reference/next.config.js/redirects.
 
-See [mapPageUrl](./lib/map-page-url.ts) and [getCanonicalPageId](https://github.com/NotionX/react-notion-x/blob/master/packages/notion-utils/src/get-canonical-page-id.ts) from for more details.
+See mapPageUrl ./lib/map-page-url.ts and getCanonicalPageId]https://github.com/NotionX/react-notion-x/blob/master/packages/notion-utils/src/get-canonical-page-id.ts from for more details.
 
 NOTE: if you have multiple pages in your workspace with the same slugified name, the app will throw an error letting you know that there are duplicate URL pathnames.
 
 ## Theming
 
-All CSS styles that customize Notion content are located in [styles/notion.css](./styles/notion.css).
+All CSS styles that customize Notion content are located in [styles/notion.css]./styles/notion.css.
 
-They mainly target global CSS classes exported by react-notion-x [styles.css](https://github.com/NotionX/react-notion-x/blob/master/packages/react-notion-x/src/styles.css).
+They mainly target global CSS classes exported by react-notion-x [styles.cssgithub.com/NotionX/react-notion-x/blob/master/packages/react-notion-x/src/styles.css.
 
 It should be pretty easy to customize most styling-related things, especially with local development and hot reload.
 
@@ -94,7 +105,7 @@ If you want to copy some of the fancier elements of my site, then you'll have to
 
 ### Fathom Analytics
 
-[Fathom](https://usefathom.com/ref/42TFOZ) provides a lightweight alternative to Google Analytics.
+[Fathom]https://usefathom.com/ref/42TFOZ provides a lightweight alternative to Google Analytics.
 
 It's optional, but I really love how simple and elegant their solution is.
 
@@ -108,7 +119,7 @@ This environment variable will only be taken into account in production, so you 
   <img alt="Embedded GitHub Comments" src="https://ssfy.io/https%3A%2F%2Fwww.notion.so%2Fimage%2Fhttps%253A%252F%252Fs3-us-west-2.amazonaws.com%252Fsecure.notion-static.com%252Fa43f996c-de07-4d8a-8461-b35f9d43e4b2%252Fcomments-desktop-opt.jpg%3Ftable%3Dblock%26id%3Ded07d7c2-57c9-4aba-81b3-f5fa069371d4%26cache%3Dv2" width="420">
 </p>
 
-[Utteranc.es](https://utteranc.es/) is an amazing [open source project](https://github.com/utterance/utterances) which enables developers to embed GitHub issues as a comments section on their websites. Genius.
+[Utteranc.es]utteranc.es/ is an amazing [open source project]github.com/utterance/utterances which enables developers to embed GitHub issues as a comments section on their websites. Genius.
 
 The integration is really simple. Just edit the `utterancesGitHubRepo` config value to point to the repo you'd like to use for issue comments.
 
@@ -118,7 +129,7 @@ You probably want to read through the Utterances docs before enabling this in pr
 
 This is a really cool feature that's inspired by Medium's smooth image loading, where we first load a low quality, blurred version of an image and animate in the full quality version once it loads. It's such a nice effect, but it does add a bit of work to set up.
 
-If `isPreviewImageSupportEnabled` is set to `true`, then the app will compute LQIP images via [lqip-modern](https://github.com/transitive-bullshit/lqip-modern) for all images referenced by your Notion workspace. These will be stored in a Google Firebase collection (as base64 JPEG data), so they only need to be computed once.
+If `isPreviewImageSupportEnabled` is set to `true`, then the app will compute LQIP images via [lqip-modern]https://github.com/transitive-bullshit/lqip-modern)for all images referenced by your Notion workspace. These will be stored in a Google Firebase collection (as base64 JPEG data), so they only need to be computed once.
 
 You'll have to set up your own Google Firebase instance of Firestore and supply three environment variables:
 
@@ -133,7 +144,7 @@ GCLOUD_PROJECT=
 FIREBASE_COLLECTION_IMAGES=
 ```
 
-The actual work happens in the [create-preview-image](./api/create-preview-image) serverless function.
+The actual work happens in the [create-preview-image]./api/create-preview-image serverless function.
 
 ### Automatic Social Images
 
@@ -162,7 +173,7 @@ This table of contents uses the same logic that Notion uses for its built-in Tab
 ### Mobile Article Page
 
 <p align="center">
-  <a href="https://transitivebullsh.it/free-resources-for-indie-saas-devs">
+  <a href="#">
     <img alt="Mobile Article Page" src="https://ssfy.io/https%3A%2F%2Fwww.notion.so%2Fimage%2Fhttps%253A%252F%252Fs3-us-west-2.amazonaws.com%252Fsecure.notion-static.com%252F6c05a0f9-59a0-4322-bef9-3f08fe4efc6a%252Farticle-mobile-opt.jpg%3Ftable%3Dblock%26id%3Da1eb2263-fdf1-4d51-a3d4-8a02cb32bbba%26cache%3Dv2" width="300">
   </a>
 </p>
@@ -170,7 +181,7 @@ This table of contents uses the same logic that Notion uses for its built-in Tab
 ### Desktop Home Page
 
 <p align="center">
-  <a href="https://transitivebullsh.it">
+  <a href="#">
     <img alt="Desktop Home Page" src="https://ssfy.io/https%3A%2F%2Fwww.notion.so%2Fimage%2Fhttps%253A%252F%252Fs3-us-west-2.amazonaws.com%252Fsecure.notion-static.com%252F1d3ab4b2-60af-4b95-b35d-cac5d440b8ca%252Ftransitivebullsh.it_-opt.jpg%3Ftable%3Dblock%26id%3D97f445e8-2da1-41cd-996a-5ad0e73a1d79%26cache%3Dv2" width="600">
   </a>
 </p>
@@ -178,13 +189,13 @@ This table of contents uses the same logic that Notion uses for its built-in Tab
 ### Desktop Article Page (Dark Mode)
 
 <p align="center">
-  <a href="https://transitivebullsh.it/free-resources-for-indie-saas-devs">
+  <a href="#">
     <img alt="Desktop Article Page" src="https://ssfy.io/https%3A%2F%2Fwww.notion.so%2Fimage%2Fhttps%253A%252F%252Fs3-us-west-2.amazonaws.com%252Fsecure.notion-static.com%252Fb564d13f-b71b-4473-8531-65b5dd9b995f%252Ftransitivebullsh.it__(4)-opt.jpg%3Ftable%3Dblock%26id%3D16e03de2-0df7-4232-a129-e1666505c4d2%26cache%3Dv2" width="600">
   </a>
 </p>
 
 ## License
 
-MIT © [Travis Fischer](https://transitivebullsh.it)
+MIT © [Travis Fischer]https://transitivebullsh.it
 
-Support my open source work by <a href="https://twitter.com/transitive_bs">following me on twitter <img src="https://storage.googleapis.com/saasify-assets/twitter-logo.svg" alt="twitter" height="24px" align="center"></a>
+Support my open source work by <a href="#">following me on twitter <img src="https://storage.googleapis.com/saasify-assets/twitter-logo.svg" alt="twitter" height="24px" align="center"></a>
