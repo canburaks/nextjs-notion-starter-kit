@@ -14,14 +14,14 @@ export default function Home() {
       'livicom.net',
       'livicomturkiye.com',
       'www.cbsofyalioglu.com',
-      'alarmsistemleri.org'
+      'alarmsistemleri.org',
+      'tr.wikipedia.org'
     ]
-    if (window.location.pathname.includes('firma')) {
-      const allAnchors = document.querySelectorAll('a')
-      for (const a of allAnchors.values()) {
-        if (!whitelist.includes(a.host)) {
-          a.rel = 'nofollow noopener'
-        }
+
+    const allAnchors = document.querySelectorAll('a')
+    for (const a of allAnchors.values()) {
+      if (!whitelist.includes(a.host)) {
+        a.rel = 'nofollow noopener'
       }
     }
   }
