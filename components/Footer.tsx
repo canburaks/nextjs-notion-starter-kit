@@ -29,7 +29,7 @@ export default function Home() {
     makeLinksNoFollow()
   }, [])
   return (
-    <Script id='show-banner' strategy='lazyOnload' afterInteractive>
+    <Script id='show-banner' strategy='lazyOnload'>
       {}
     </Script>
   )

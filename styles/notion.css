@@ -196,6 +196,7 @@
 }
 
 .notion-link {
+  word-break: keep-all;
   position: relative;
   transition: unset;
   opacity: 1;
